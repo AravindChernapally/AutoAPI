@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertySourcesPlaceholderConfigurer"
+          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="location" value="environment/qa.properties"/>
+    </bean>
+
+    <!--Root Folder for all the test data-->
+    <bean id="root_folder" class="java.lang.String">
+        <constructor-arg value="${root_folder}"/>
+    </bean>
+
+    <!--Sample Test Data
+    <bean id="SampleTestData" class="java.lang.String">
+        <constructor-arg value="${SampleTestData}"/>
+    </bean>
+    -->
+
+    <!--Sample Test Data-->
+    <bean id="ProcessOrder" class="java.lang.String">
+        <constructor-arg value="${ProcessOrder}"/>
+    </bean>
+
+    <bean id="YodleeAuthToken" class="java.lang.String">
+        <constructor-arg value="${YodleeAuthToken}"/>
+    </bean>
+
+    <bean id="GetAccountsTest" class="java.lang.String">
+        <constructor-arg value="${GetAccountsTest}"/>
+    </bean>
+
+    <bean id="IVResultsTest" class="java.lang.String">
+        <constructor-arg value="${IVResultsTest}"/>
+    </bean>
+
+
+
+    <!-- Api Base Url
+    <bean id="apiCrimUrl" class="com.rp.apis.functionallibrary.CriminalHub">
+        <constructor-arg value="${ApiBaseUrl_Crim}"/>
+    </bean>
+     -->
+    <!-- Api Base Url   -->
+    <bean id="apiProcessOrderUrl" class="com.rp.apis.functionallibrary.ProcessOrderHub">
+        <constructor-arg value="${ApiBaseUrl_Crim}"/>
+    </bean>
+    <bean id="YodleeAuthTokenHubUrl" class="com.rp.apis.functionallibrary.YodleeAuthTokenHub">
+        <constructor-arg value="${YodleeAuthToken_Crim}"/>
+    </bean>
+
+    <bean id="GetAccountsUrl" class="com.rp.apis.functionallibrary.GetAccountsHub">
+        <constructor-arg value="${GetAccounts_Crim}"/>
+    </bean>
+
+    <bean id="IVResultsUrl" class="com.rp.apis.functionallibrary.IVResultsHub">
+        <constructor-arg value="${IVResults_Crim}"/>
+    </bean>
+
+
+    <!--  RestUtils  -->
+    <bean id="rest_utils" class="com.rp.util.RestUtils"> </bean>
+
+    <bean id="criminalBuilder" class="com.rp.apis.apibuilder.ProcessOrderHubRequestBuilder">
+    </bean>
+
+    <bean id="GetAccountsBuilder" class="com.rp.apis.apibuilder.GetAccountsRequestBuilder">
+    </bean>
+
+    <bean id="IVResultsBuilder" class="com.rp.apis.apibuilder.IVResultsRequestBuilder">
+    </bean>
+
+    <!--  Api Authentication  -->
+    <bean id="authentication" class="com.rp.apis.apiconfig.Authentication"/>
+
+    <!-- Starter Kit database-->
+    <bean id="starterKitDatasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"
+                  value="org.postgresql.Driver"/>
+        <property name="url"
+                  value="${starterKitConnectionUrl}"/>
+        <property name="username" value="${postGreSqlUsername}"/>
+        <property name="password" value="${postGreSqlPassword}"/>
+    </bean>
+
+    <bean id="starterKitJdbi"
+          class="org.jdbi.v3.spring5.JdbiFactoryBean">
+        <property name="dataSource" ref="starterKitDatasource"/>
+    </bean>
+
+    <bean id="tokenManagementDaoFactory"
+          class="com.lds.models.db.StarterKitDao">
+        <constructor-arg ref="starterKitJdbi"/>
+    </bean>
+</beans>
+
+<!-- ################## Test Data #########################
+test_environment=StarterKit-Local
+root_folder=TestData
+SampleTestData=SampleTestData.json
+_baseUrlCrim=https://scr-criminalhubapi-sat.corp.realpage.com
+
+################# Application Url ####################
+ApiBaseUrl=https://reqres.in
+ApiBaseUrl_Crim=https://scr-criminalhubapi-sat.corp.realpage.com
+
+############## Database Configuration ################
+postGreSqlUsername=postgres
+postGreSqlPassword=starterkit
+starterKitConnectionUrl=jdbc:postgresql://localhost:5432/starter_kit
+
+
+
+
+-->

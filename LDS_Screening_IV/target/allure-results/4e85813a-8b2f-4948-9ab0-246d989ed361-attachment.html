@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Sample Report</title>
+</head>
+
+<body>
+<div class="alert alert-success"><h2>TEST METHOD: verifyGetAccountsTest</h2></div><hr />
+    <div class="card">
+        <div class="card-header text-bg-success mb-3"><h5>Request and Response for GetAccounts forecast</h5></div>
+        <div class="card-body">
+            <p class="card-text">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timestamp</strong></td>
+                        <td class="font-monospace">2023-07-03 16:52:08.20</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Value</strong></td>
+                        <td class="font-monospace">URL https://p5y894pmn5.execute-api.us-east-2.amazonaws.com/qa/accountsdetail</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected</strong></td>
+                        <td class="font-monospace">Request {
+	&quot;httpStatusCode&quot;: 0,
+	&quot;consumerId&quot;: &quot;4d394ede-3703-4df8-9449-f2548e7aa346&quot;,
+	&quot;transactionId&quot;: &quot;96095f50-d6c3-426b-a2d1-0cc51f1ad90b&quot;,
+	&quot;yodleeFinancialAccountRequest&quot;: {
+		&quot;accountIds&quot;: &quot;10442527,10442528&quot;,
+		&quot;authToken&quot;: &quot;FrzIGumdetzBceLBXHg0Td8mUGYl&quot;
+	}
+}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actual</strong></td>
+                        <td class="font-monospace">Response {
+    &quot;ConsumerId&quot;: &quot;4d394ede-3703-4df8-9449-f2548e7aa346&quot;,
+    &quot;TransactionId&quot;: &quot;96095f50-d6c3-426b-a2d1-0cc51f1ad90b&quot;,
+    &quot;VendorName&quot;: &quot;Yodlee, Inc.&quot;,
+    &quot;AllBanksTotalDeposit&quot;: 30772.89,
+    &quot;VerifiedAverageMonthlyIncome&quot;: 10257.63,
+    &quot;FinancialDetails&quot;: {
+        &quot;AccountDetails&quot;: [
+            {
+                &quot;BankName&quot;: &quot;IQ Bank&quot;,
+                &quot;AccountId&quot;: 10442528,
+                &quot;AccountType&quot;: &quot;SAVINGS&quot;,
+                &quot;AccountNumber&quot;: &quot;xxxx6014&quot;,
+                &quot;AccountOwners&quot;: [
+                    &quot;APRIL CHARLES&quot;,
+                    &quot;EMILY JENNY&quot;
+                ],
+                &quot;TotalDeposit&quot;: 13838.44
+            },
+            {
+                &quot;BankName&quot;: &quot;IQ Bank&quot;,
+                &quot;AccountId&quot;: 10442527,
+                &quot;AccountType&quot;: &quot;CHECKING&quot;,
+                &quot;AccountNumber&quot;: &quot;xxxx3793&quot;,
+                &quot;AccountOwners&quot;: [
+                    &quot;BENJAMIN MAMIE&quot;,
+                    &quot;MELINDA TERESA&quot;
+                ],
+                &quot;TotalDeposit&quot;: 16934.45
+            }
+        ],
+        &quot;AccountTransactionDetails&quot;: [
+            
+        ]
+    }
+}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timing</strong></td>
+                        <td class="font-monospace">0 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header text-bg-success mb-3"><h5>Verify GetAccounts code</h5></div>
+        <div class="card-body">
+            <p class="card-text">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timestamp</strong></td>
+                        <td class="font-monospace">2023-07-03 16:52:08.27</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Value</strong></td>
+                        <td class="font-monospace">Status Code</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected</strong></td>
+                        <td class="font-monospace">200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actual</strong></td>
+                        <td class="font-monospace">200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timing</strong></td>
+                        <td class="font-monospace">7 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</hr><hr />

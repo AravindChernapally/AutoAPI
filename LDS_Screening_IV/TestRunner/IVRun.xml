@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sanity IV API Tests" allow-return-values="true">
+
+    <test verbose="1" name="API Test" preserve-order="true" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.lds.scripts.ProcessOrderTest">
+                <methods>
+                    <include name="verifyConsumerIdTransactionId"/>
+                    <include name="verifyConsumerIdTransactionId2"/>
+                </methods>
+            </class>
+
+            <class name="com.lds.scripts.YodleeAuthTokenTest">
+            <methods>
+                <include name="verifyYodleeAuthToken"/>
+            </methods>
+        </class>
+
+            <class name="com.lds.scripts.GetAccountsTest">
+                <methods>
+                    <include name="verifyGetAccountsTest"/>
+                </methods>
+            </class>
+
+            <class name="com.lds.scripts.IVResultsTest">
+                <methods>
+                    <include name="verifyIVResultsTest"/>
+                </methods>
+            </class>
+
+    </classes>
+
+    </test>
+</suite>

@@ -1,0 +1,22 @@
+{
+  "SampleTestData":
+  {
+    "verifyCriminalHubTest":
+    [
+      {
+        "RunIteration": "Yes",
+        "firstName":"Renee ",
+        "middleName":"Lorene ",
+        "lastName":"HAWKINS ",
+        "suffix":"",
+        "dob":"8-8-1966",
+        "gender":"F",
+        "state": "AK",
+        "nationalSOR": 0,
+        "noDOB": 0,
+        "classification": 1,
+        "vendor": "BulkData"
+      }
+    ]
+  }
+}

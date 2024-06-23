@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Sample Report</title>
+</head>
+
+<body>
+<div class="alert alert-success"><h2>TEST METHOD: verifyConsumerIdTransactionId2</h2></div><hr />
+    <div class="card">
+        <div class="card-header text-bg-success mb-3"><h5> Request and Response for Process Orders</h5></div>
+        <div class="card-body">
+            <p class="card-text">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timestamp</strong></td>
+                        <td class="font-monospace">2023-07-03 15:45:20.125</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Value</strong></td>
+                        <td class="font-monospace">URL https://61lmmw41ml.execute-api.us-east-2.amazonaws.com/qa/processorders</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected</strong></td>
+                        <td class="font-monospace">Request {
+	&quot;httpStatusCode&quot;: 0,
+	&quot;consumer&quot;: {
+		&quot;appPartnerUniqueId&quot;: &quot;&quot;,
+		&quot;emailAddress&quot;: &quot;&quot;,
+		&quot;firstName&quot;: &quot;&quot;,
+		&quot;lastName&quot;: &quot;&quot;
+	},
+	&quot;transaction&quot;: {
+		&quot;appPartner&quot;: &quot;&quot;,
+		&quot;companyID&quot;: &quot;&quot;,
+		&quot;orders&quot;: [
+			{
+				&quot;name&quot;: &quot;&quot;
+			}
+		],
+		&quot;PMS&quot;: &quot;&quot;,
+		&quot;propertyID&quot;: &quot;&quot;
+	}
+}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actual</strong></td>
+                        <td class="font-monospace">Response {
+    &quot;ConsumerId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
+    &quot;TransactionId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
+    &quot;Orders&quot;: [
+        
+    ],
+    &quot;ErrorDetails&quot;: {
+        &quot;Status&quot;: 400,
+        &quot;Message&quot;: &quot;FirstName should not be null or empty;\nLastName should not be null or empty;\nEmailAddress should not be null or empty;\nAppPartnerUniqueId should not be null or empty;\nCompanyID should not be null or empty;\nPropertyID should not be null or empty;\nAppPartner should not be null or empty;\nPMS should not be null or empty;\nInvalid Orders&quot;
+    }
+}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timing</strong></td>
+                        <td class="font-monospace">0 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header text-bg-success mb-3"><h5>Verify Process Order status code</h5></div>
+        <div class="card-body">
+            <p class="card-text">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timestamp</strong></td>
+                        <td class="font-monospace">2023-07-03 15:45:20.129</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Value</strong></td>
+                        <td class="font-monospace">Status Code</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected</strong></td>
+                        <td class="font-monospace">200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actual</strong></td>
+                        <td class="font-monospace">200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timing</strong></td>
+                        <td class="font-monospace">4 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</hr><hr />

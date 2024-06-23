@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sanity Api Tests" allow-return-values="true">
+
+    <test verbose="1" name="API Test" preserve-order="true" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.lds.scripts.CriminalHubTest">
+                <methods>
+                    <include name="verifyCriminalHubTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

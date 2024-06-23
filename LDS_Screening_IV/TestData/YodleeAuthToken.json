@@ -1,0 +1,17 @@
+{
+  "YodleeAuthToken":
+  {
+    "verifyYodleeAuthToken":
+    [
+      {
+        "RunIteration": "Yes",
+        "ConsumerId":"2f5a3de5-18ce-43dc-84f5-22063036e362",
+        "TransactionId":"292711e9-9090-4d17-a617-c66608f0a5e7 ",
+        "Status":"1",
+        "CreatedBy":"Transaction",
+        "CreatedDate":"2023-06-16T09:20:14.4831119Z",
+        "Name":"IncomeVerification"
+      }
+    ]
+  }
+}

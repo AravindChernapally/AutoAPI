@@ -1,0 +1,334 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Sample Report</title>
+</head>
+
+<body>
+<div class="alert alert-success"><h2>TEST METHOD: verifyIVResultsTest</h2></div><hr />
+    <div class="card">
+        <div class="card-header text-bg-success mb-3"><h5> Request and Response for IVResults</h5></div>
+        <div class="card-body">
+            <p class="card-text">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timestamp</strong></td>
+                        <td class="font-monospace">2023-07-03 16:52:13.964</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Value</strong></td>
+                        <td class="font-monospace">URL https://p5y894pmn5.execute-api.us-east-2.amazonaws.com/qa/ivresults</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected</strong></td>
+                        <td class="font-monospace">Request {
+	&quot;httpStatusCode&quot;: 0,
+	&quot;companyID&quot;: &quot;1048354&quot;,
+	&quot;consumerId&quot;: &quot;4d394ede-3703-4df8-9449-f2548e7aa346&quot;,
+	&quot;orderName&quot;: &quot;IncomeVerification&quot;,
+	&quot;PMS&quot;: &quot;OS&quot;,
+	&quot;propertyID&quot;: &quot;4074161&quot;,
+	&quot;transactionId&quot;: &quot;96095f50-d6c3-426b-a2d1-0cc51f1ad90b&quot;
+}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actual</strong></td>
+                        <td class="font-monospace">Response {
+    &quot;IncomeDetails&quot;: {
+        &quot;VendorName&quot;: &quot;Yodlee, Inc.&quot;,
+        &quot;AllBanksTotalDeposit&quot;: 30772.89,
+        &quot;VerifiedAverageMonthlyIncome&quot;: 10257.63,
+        &quot;VerifiedDate&quot;: &quot;2023-07-03T11:22:07.5032363Z&quot;,
+        &quot;FinancialDetails&quot;: {
+            &quot;AccountDetails&quot;: [
+                {
+                    &quot;BankName&quot;: &quot;IQ Bank&quot;,
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;AccountType&quot;: &quot;SAVINGS&quot;,
+                    &quot;AccountNumber&quot;: &quot;xxxx6014&quot;,
+                    &quot;AccountOwners&quot;: [
+                        &quot;APRIL CHARLES&quot;,
+                        &quot;EMILY JENNY&quot;
+                    ],
+                    &quot;TotalDeposit&quot;: 13838.44
+                },
+                {
+                    &quot;BankName&quot;: &quot;IQ Bank&quot;,
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;AccountType&quot;: &quot;CHECKING&quot;,
+                    &quot;AccountNumber&quot;: &quot;xxxx3793&quot;,
+                    &quot;AccountOwners&quot;: [
+                        &quot;BENJAMIN MAMIE&quot;,
+                        &quot;MELINDA TERESA&quot;
+                    ],
+                    &quot;TotalDeposit&quot;: 16934.45
+                }
+            ],
+            &quot;AccountTransactionDetails&quot;: [
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Citibank Deposit&quot;,
+                    &quot;Amount&quot;: 3964.7,
+                    &quot;TransactionDate&quot;: &quot;2023-06-30T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Interest Income&quot;,
+                    &quot;Amount&quot;: 1.28,
+                    &quot;TransactionDate&quot;: &quot;2023-06-29T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;DES:REWARDS ID: 2844 Wells Fargo&quot;,
+                    &quot;Amount&quot;: 53.43,
+                    &quot;TransactionDate&quot;: &quot;2023-06-27T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;ACH CREDIT&quot;,
+                    &quot;Amount&quot;: 282.29,
+                    &quot;TransactionDate&quot;: &quot;2023-06-25T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;DIRECT DEPOSIT&quot;,
+                    &quot;Amount&quot;: 3328.83,
+                    &quot;TransactionDate&quot;: &quot;2023-06-15T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;DES:VENDORPAYM BKOFAMERIC Salt Lake City:UT&quot;,
+                    &quot;Amount&quot;: 1552.79,
+                    &quot;TransactionDate&quot;: &quot;2023-06-11T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;Four Seasons Hotels and Resorts Deposit&quot;,
+                    &quot;Amount&quot;: 342.28,
+                    &quot;TransactionDate&quot;: &quot;2023-06-09T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;CASHBACK PNCBANK&quot;,
+                    &quot;Amount&quot;: 134.68,
+                    &quot;TransactionDate&quot;: &quot;2023-06-09T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;HSBC Deposit&quot;,
+                    &quot;Amount&quot;: 2635.25,
+                    &quot;TransactionDate&quot;: &quot;2023-05-30T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Chase Deposit&quot;,
+                    &quot;Amount&quot;: 3136.51,
+                    &quot;TransactionDate&quot;: &quot;2023-05-30T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Interest Income&quot;,
+                    &quot;Amount&quot;: 0.1,
+                    &quot;TransactionDate&quot;: &quot;2023-05-29T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Interest Income&quot;,
+                    &quot;Amount&quot;: 1.42,
+                    &quot;TransactionDate&quot;: &quot;2023-05-29T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;BANK CREDIT Santander Bank&quot;,
+                    &quot;Amount&quot;: 1163.17,
+                    &quot;TransactionDate&quot;: &quot;2023-05-27T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;Rewards from Citibank&quot;,
+                    &quot;Amount&quot;: 87.9,
+                    &quot;TransactionDate&quot;: &quot;2023-05-27T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;ACH CREDIT&quot;,
+                    &quot;Amount&quot;: 204.44,
+                    &quot;TransactionDate&quot;: &quot;2023-05-25T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;DIRECT DEPOSIT&quot;,
+                    &quot;Amount&quot;: 3328.83,
+                    &quot;TransactionDate&quot;: &quot;2023-05-15T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;DES:VENDORPAYM BKOFAMERIC Salt Lake City:UT&quot;,
+                    &quot;Amount&quot;: 307.75,
+                    &quot;TransactionDate&quot;: &quot;2023-05-11T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;Uber Deposit&quot;,
+                    &quot;Amount&quot;: 254.71,
+                    &quot;TransactionDate&quot;: &quot;2023-05-09T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Rewards from Santander&quot;,
+                    &quot;Amount&quot;: 155.24,
+                    &quot;TransactionDate&quot;: &quot;2023-05-09T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;ACH Credit Santander Bank&quot;,
+                    &quot;Amount&quot;: 1065.34,
+                    &quot;TransactionDate&quot;: &quot;2023-05-06T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Interest Income&quot;,
+                    &quot;Amount&quot;: 2.66,
+                    &quot;TransactionDate&quot;: &quot;2023-04-29T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;REWARDS BANKCARD&quot;,
+                    &quot;Amount&quot;: 47.27,
+                    &quot;TransactionDate&quot;: &quot;2023-04-27T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;Bank of America Deposit&quot;,
+                    &quot;Amount&quot;: 1819.82,
+                    &quot;TransactionDate&quot;: &quot;2023-04-27T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;BANK CREDIT Santander Bank&quot;,
+                    &quot;Amount&quot;: 1891.27,
+                    &quot;TransactionDate&quot;: &quot;2023-04-27T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;ACH CREDIT&quot;,
+                    &quot;Amount&quot;: 274.78,
+                    &quot;TransactionDate&quot;: &quot;2023-04-25T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442528,
+                    &quot;IncomeSource&quot;: &quot;DES:VENDORPAYM MOBILE Olympia:WA&quot;,
+                    &quot;Amount&quot;: 126.24,
+                    &quot;TransactionDate&quot;: &quot;2023-04-15T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;DIRECT DEPOSIT&quot;,
+                    &quot;Amount&quot;: 3328.83,
+                    &quot;TransactionDate&quot;: &quot;2023-04-15T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;Four Seasons Hotels and Resorts Deposit&quot;,
+                    &quot;Amount&quot;: 202.37,
+                    &quot;TransactionDate&quot;: &quot;2023-04-09T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                },
+                {
+                    &quot;AccountId&quot;: 10442527,
+                    &quot;IncomeSource&quot;: &quot;BANK CREDIT Santander Bank&quot;,
+                    &quot;Amount&quot;: 1078.71,
+                    &quot;TransactionDate&quot;: &quot;2023-04-06T00:00:00&quot;,
+                    &quot;IsIncluded&quot;: true
+                }
+            ]
+        }
+    }
+}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timing</strong></td>
+                        <td class="font-monospace">0 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header text-bg-success mb-3"><h5>Verify IVResults status code</h5></div>
+        <div class="card-body">
+            <p class="card-text">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Timestamp</strong></td>
+                        <td class="font-monospace">2023-07-03 16:52:13.974</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Value</strong></td>
+                        <td class="font-monospace">Status Code</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expected</strong></td>
+                        <td class="font-monospace">200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actual</strong></td>
+                        <td class="font-monospace">200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timing</strong></td>
+                        <td class="font-monospace">10 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</hr><hr />

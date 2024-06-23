@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Api Tests" allow-return-values="true">
+
+    <test verbose="1" name="API Test" preserve-order="true" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.lds.scripts.ResidentDatabaseTest">
+                <methods>
+                    <include name="verifyResidentRecordInDatabase"/>
+                </methods>
+            </class>
+            <!--<class name="com.lds.scripts.WeatherForecastApiTest">
+                <methods>
+                    <include name="verifyWeatherForecastApi"/>
+                </methods>
+            </class>-->
+        </classes>
+    </test>
+</suite>
